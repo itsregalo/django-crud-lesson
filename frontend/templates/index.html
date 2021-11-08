@@ -1,19 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    Hello World <br><br>
+{% extends 'base.html' %}
+
+
+{% block body %}
+    
+    <div class="container">
+        Hello World <br><br>
     <hr>
 
-    
+
     {% for object in posts %}
-        <b>{{ object.title }}</b><br>
+        <b><a href="{% url 'core:post-detail' object.pk %}">{{ object.title }}</a></b><br><br><br>
     {% endfor %}
-        
-</body>
-</html>
+    
+    </div>
+
+{% endblock body %}
+    

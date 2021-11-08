@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+
+{% block body %}
+    <h4>Upload Form</h4>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock body %}
+    

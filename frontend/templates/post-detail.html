@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+    <div class="container">
+        <h5>{{ post.title }}</h5><p>by {{ post.author }}</p><br>
+
+        <p>{{ post.content}}</p><br>
+        <p>{{ post.timestamp }}</p>
+    </div>
+{% endblock body %}
+    
